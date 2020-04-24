@@ -1,16 +1,1 @@
-*/1 * * * * /root/autostart.sh >> /root/rankout.txt  2>&1
-*/1 * * * * /root/autostartcheck.sh
-*/1 * * * * /root/autostartsub.sh >> subout.txt
-*/1 * * * * /srv/admiralbullbot/startbot.sh >/dev/null 2>&1
-*/1 * * * * /root/autostartmulti.sh >> /root/multiout.txt  2>&1
-*/1 * * * * /root/autostartid.sh >> /root/gameid.txt  2>&1
-*/1 * * * * /srv/admiralbullbot/startrelay.sh >/dev/null 2>&1
-*/5 * * * * cd /srv/chatters; /srv/chatters/chatters >> /var/log/bullbot/chatters.log 2>>/var/log/bullbot/chatters.err
-# */1 * * * * /root/autostartppd.sh >> /root/ppdid.txt  2>&1
-*/1 * * * * /srv/ppdbot/startbot.sh >/dev/null 2>&1
-*/5 * * * * cd /srv/ppdpoints; /srv/ppdpoints/ppdpoints >> /var/log/ppdbot/chatters.err
-*/1 * * * * /srv/redditbot/startbot.sh >/dev/null 2>&1
-*/1 * * * * /srv/subgamebot/startbot.sh
-*/1 * * * * cd /srv/webdis; /srv/webdis/autostart.sh >> /srv/webdis/webdislog.txt 2>&1
-0 0 * * * systemctl restart uwsgi.bullbot
-30 0 * * * pm2 restart integration
+0 0 * * * /bin/systemctl restart pajbot2 // Authentication randomly expires no idea why
